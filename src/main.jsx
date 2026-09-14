@@ -6,8 +6,8 @@ import { ProductProvider } from './component/contect/ProductContect.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProductProvider>
+    
       <App />
-    </ProductProvider>
+    
   </StrictMode>,
 )
