@@ -2,54 +2,53 @@ import React from "react";
 import { FaShoppingCart, FaStar, FaEye } from "react-icons/fa";
 
 function ProductCard({ product, onAddToCart, onViewDetails }) {
-  // Calculate discount
+
   const discount = product.originalPrice
     ? Math.round(
-      ((product.originalPrice - product.price) /
-        product.originalPrice) *
-      100
-    )
+        ((product.originalPrice - product.price) /
+          product.originalPrice) *
+          100
+      )
     : 0;
 
   return (
-    <div className="group bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+    <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-lg transition">
 
       {/* Product Image */}
       <div className="relative overflow-hidden">
+
         <img
-          src={product.image[0]}
+          src={product.image?.[0]}
           alt={product.name}
-          className="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+          className="w-full h-64 object-cover hover:scale-105 transition duration-300"
         />
 
         {/* Discount */}
         {discount > 0 && (
-          <span className="absolute left-3 top-3 rounded-full bg-pink-500 px-3 py-1 text-sm font-bold text-white">
+          <span className="absolute top-3 left-3 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
             -{discount}%
           </span>
         )}
-        {/* View Details */}
-        <button onClick={() => onViewDetails?.(product)} className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white
-  text-gray-700 px-3 py-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300
-  flex items-center gap-1 text-xs hover:bg-pink-500 hover:text-white" > <FaEye /> View </button>
 
+        {/* Category */}
+        <span className="absolute top-3 right-3 bg-white text-pink-600 px-3 py-1 rounded-full text-xs font-semibold">
+          {product.category}
+        </span>
       </div>
 
       {/* Product Information */}
-      <div className="p-5">
+      <div className="p-4">
 
-        {/* Brand */}
-        <p className="text-sm font-medium text-pink-500">
+        <p className="text-sm text-pink-500 font-semibold">
           {product.brand}
         </p>
 
-        {/* Name */}
-        <h2 className="mt-1 text-lg font-bold text-gray-800">
+        <h2 className="text-lg font-bold text-gray-900 mt-1 line-clamp-2">
           {product.name}
         </h2>
 
         {/* Rating */}
-        <div className="mt-2 flex items-center gap-1">
+        <div className="flex items-center gap-1 mt-2">
           <FaStar className="text-yellow-400" />
           <span className="text-sm text-gray-600">
             {product.rating}
@@ -57,7 +56,8 @@ function ProductCard({ product, onAddToCart, onViewDetails }) {
         </div>
 
         {/* Price */}
-        <div className="mt-3 flex items-center gap-3">
+        <div className="flex items-center gap-2 mt-3">
+
           <span className="text-xl font-bold text-pink-600">
             ${product.price}
           </span>
@@ -67,16 +67,29 @@ function ProductCard({ product, onAddToCart, onViewDetails }) {
               ${product.originalPrice}
             </span>
           )}
+
         </div>
 
-        {/* Add To Cart */}
-        <button
-          onClick={() => onAddToCart(product)}
-          className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-pink-500 px-4 py-3 font-semibold text-white transition hover:bg-pink-600"
-        >
-          <FaShoppingCart />
-          Add to Cart
-        </button>
+        {/* Buttons */}
+        <div className="flex gap-2 mt-4">
+
+          <button
+            onClick={() => onAddToCart && onAddToCart(product)}
+            className="flex-1 flex items-center justify-center gap-2 bg-pink-500 text-white py-2 rounded-xl hover:bg-pink-600 transition"
+          >
+            <FaShoppingCart />
+            Add
+          </button>
+
+          <button
+            onClick={() => onViewDetails && onViewDetails(product)}
+            className="px-4 py-2 border border-pink-200 text-pink-600 rounded-xl hover:bg-pink-50 transition"
+          >
+            <FaEye />
+          </button>
+
+        </div>
+
       </div>
     </div>
   );
