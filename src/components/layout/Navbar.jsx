@@ -1,11 +1,14 @@
+
 import React from "react";
+
 import {
   FaShoppingCart,
   FaUser,
   FaSearch,
 } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
-import { useCart } from "../context-CarContext.jsx";
+import { useCart } from "../context/CartContext";
 
 function Navbar() {
   const { cartCount } = useCart();
@@ -24,19 +27,31 @@ function Navbar() {
 
         {/* Menu */}
         <div className="flex gap-8 text-white font-semibold">
-          <Link to="/" className="hover:text-red-600">
+          <Link
+            to="/"
+            className="hover:text-red-600"
+          >
             Home
           </Link>
 
-          <Link to="/shop" className="hover:text-red-600">
+          <Link
+            to="/shop"
+            className="hover:text-red-600"
+          >
             Shop
           </Link>
 
-          <Link to="/about" className="hover:text-red-600">
+          <Link
+            to="/about"
+            className="hover:text-red-600"
+          >
             About
           </Link>
 
-          <Link to="/contact" className="hover:text-red-600">
+          <Link
+            to="/contact"
+            className="hover:text-red-600"
+          >
             Contact
           </Link>
         </div>
@@ -75,3 +90,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

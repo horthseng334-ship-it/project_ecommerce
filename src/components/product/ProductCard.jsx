@@ -1,7 +1,7 @@
 import React from "react";
 import { FaShoppingCart, FaStar, FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../../context/CartContext.jsx";
+import { useCart } from "../context/CartContext";
 
 function ProductCard({ product }) {
   const navigate = useNavigate();
