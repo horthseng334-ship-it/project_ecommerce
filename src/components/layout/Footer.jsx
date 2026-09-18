@@ -28,7 +28,7 @@ function Footer() {
             </h3>
 
             <div className="flex flex-col gap-2 text-gray-400">
-              <span className="hover:text-pink-400 cursor-pointer">
+              <span className="hover:text-pink-400 cursor-pointer ">
                 Home
               </span>
 

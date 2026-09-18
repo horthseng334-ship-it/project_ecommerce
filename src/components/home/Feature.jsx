@@ -31,7 +31,7 @@ function Feature() {
 ];
 
     return (
-        <section className="bg-gray-100 py-10">
+        <section className=" py-10">
             <div className="w-full mx-auto px-6">
                  {/* Main Title */}
             <h2 className="text-3xl font-bold text-center text-pink-800 mb-8">

@@ -7,7 +7,7 @@ function HeroSection() {
   const navigate = useNavigate()
 
   return (
-    <section className="bg-pink-300 mt-2">
+    <section className="bg-pink-200 mt-2">
 
       {/* Main container */}
       <div className="max-w-7xl mx-auto px-6 py-20">
@@ -47,7 +47,7 @@ function HeroSection() {
           <div className="flex justify-center">
 
             <img
-              src="https://cdn.salla.sa/GYWbYW/701673d8-953c-4e84-8401-c9bcbe862576-1000x562.5-CZg0oMM0H1OKbaaSE2iAKRmzaVq0ftyhetE6RSrm.jpg"
+              src="https://i.pinimg.com/736x/cc/c7/0b/ccc70b255e2c0363425611da0a040baa.jpg"
               alt="Skincare products"
               className="w-full max-w-lg rounded-xl shadow-lg"
             />
@@ -62,5 +62,5 @@ function HeroSection() {
   )
 }
 
-export default HeroSection
+export default HeroSection;
 
