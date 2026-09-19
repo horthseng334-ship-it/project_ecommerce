@@ -62,7 +62,7 @@ function Productdetail() {
   };
 
   return (
-    <div className="min-h-screen bg-pink-50 py-10 px-4">
+    <div className="min-h-screen bg-pink-100 py-10 px-4">
       <div className="max-w-7xl mx-auto">
 
         {/* ================= MAIN PRODUCT ================= */}
