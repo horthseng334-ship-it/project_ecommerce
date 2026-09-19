@@ -12,37 +12,46 @@ import {
 
 function About() {
   return (
-    <div className="min-h-screen  from-pink-50/50 via-white to-white pt-24 pb-16">
+    <div className="min-h-screen  from-pink-50/50 via-white to-white pt-24 pb-16 bg-pink-200">
 
       {/* ================= HERO ================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 ">
+      <h2 className="font-bold text-center text-4xl
+            md:text-5xl
+            
+            text-gray-900">ABOUT 
+             <span className="text-pink-500">
+              {" "}OUR   </span> STORE</h2>
 
         <div className="
           
           from-pink-100
           via-white
-          to-pink-50
+          
           rounded-3xl
           p-8 md:p-14
           text-center
           border border-pink-100
-          shadow-sm
+          
+          bg-pink-300
+          mt-4
+          shadow-lg
         ">
 
           <div className="
             inline-flex
             items-center
-            gap-2
-            px-4 py-2
-            bg-pink-200
+            
+            fs-5
+            
             text-pink-600
-            rounded-full
-            text-sm
-            font-semibold
+            
             mb-5
           ">
-            <FaHeart />
-            ABOUT OUR STORE
+            <FaHeart className=" text-5xl
+            mx-auto
+            mb-2"  />
+            
           </div>
 
           <h1 className="
@@ -63,6 +72,7 @@ function About() {
             mt-5
             text-gray-500
             leading-7
+            
           ">
             Welcome to our skincare store. We are passionate about
             helping you discover quality skincare products that make
@@ -111,6 +121,7 @@ function About() {
               uppercase
               tracking-wider
               text-sm
+              
             ">
               Who We Are
             </p>
@@ -121,6 +132,7 @@ function About() {
               font-bold
               text-gray-900
               mt-2
+              
             ">
               Your Skincare,
               <span className="text-pink-500">
@@ -442,7 +454,7 @@ function About() {
           text-center
           text-white
           shadow-lg
-          shadow-pink-200
+          
         ">
 
           <FaHeart className="

@@ -41,16 +41,16 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center px-4 py-24">
+    <div className="min-h-screen bg-pink-200 from-pink-50 via-white to-pink-100 flex items-center justify-center px-4 py-24">
 
       <div className="
         w-full
         max-w-md
-        bg-white
+        bg-pink-100
         rounded-3xl
         shadow-xl
-        shadow-pink-100
-        border border-pink-100
+        shadow-pink-50
+        border-none
         p-6 sm:p-8
       ">
 

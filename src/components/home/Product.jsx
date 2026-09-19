@@ -20,8 +20,8 @@ function Product() {
 
         {/* Title */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">
-            Our Products
+          <h2 className="text-3xl font-bold  fs-4 text-pink-800">
+             Products list
           </h2>
 
           <p className="text-gray-500 mt-2">

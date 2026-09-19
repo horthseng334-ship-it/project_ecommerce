@@ -14,11 +14,12 @@ import {
 
 
 import { ProductData } from "../data/ProductData";
+import { useCart } from "../context/CartContext";
 
-function Productdetail({ onAddToCart }) {
+function Productdetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-
+  const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [liked, setLiked] = useState(false);
 
@@ -44,13 +45,11 @@ function Productdetail({ onAddToCart }) {
       )
     : 0;
 
-  const handleAddToCart = () => {
-    if (onAddToCart) {
-      for (let i = 0; i < quantity; i++) {
-        onAddToCart(product);
-      }
-    }
-  };
+ const handleAddToCart = () => {
+  for (let i = 0; i < quantity; i++) {
+    addToCart(product);
+  }
+};
 
   const increaseQuantity = () => {
     setQuantity(quantity + 1);

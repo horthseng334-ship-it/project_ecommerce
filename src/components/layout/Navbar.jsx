@@ -22,7 +22,7 @@ function Navbar() {
           to="/"
           className="text-2xl text-white font-medium"
         >
-          SinkcareStore
+          SkincareStore
         </Link>
 
         {/* Menu */}
