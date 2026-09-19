@@ -20,7 +20,7 @@ function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold">
-              SinkCare
+              Skincare
             </h2>
 
             <p className="mt-3 leading-6 max-w-md">
