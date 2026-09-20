@@ -5,7 +5,7 @@ import MainLayout from "./components/layout/MainLayout";
 import Homepage from "./components/pages/Homepage";
 import ShopPage from "./components/pages/ShopPage";
 import ProductDetail from "./components/product/ProductDetail";
-import Aboutpage from "./components/pages/Aboutpage";
+import AboutPage from "./components/pages/AboutPage";
 import Contact from "./components/pages/Contact";
 import Login from "./components/pages/Login";
 import CartPage from "./components/pages/CartPage";
@@ -13,30 +13,20 @@ import CartPage from "./components/pages/CartPage";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}>
 
-        {/* Home */}
-        <Route index element={<Homepage />} />
+      {/* Login is the first page */}
+      <Route path="/" element={<Login />} />
 
-        {/* Shop */}
-        <Route path="shop" element={<ShopPage />} />
-
-        {/* Product Detail */}
-        <Route path="product/:id" element={<ProductDetail />} />
-
-        {/* About */}
-        <Route path="about" element={<Aboutpage />} />
-
-        {/* Contact */}
-        <Route path="contact" element={<Contact />} />
-
-        {/* Login */}
-        <Route path="login" element={<Login />} />
-
-        {/* Cart */}
-        <Route path="cart" element={<CartPage />} />
-
+      {/* Website after login */}
+      <Route element={<MainLayout />}>
+        <Route path="/home" element={<Homepage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<CartPage />} />
       </Route>
+
     </Routes>
   );
 }

@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import {
   FaEnvelope,
   FaLock,
@@ -33,92 +32,73 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Demo login
+    // after login
     alert("Login successful!");
 
-    // Go to homepage
-    navigate("/");
+    // Go to Homepage after login
+    navigate("/home");
   };
 
   return (
-    <div className="min-h-screen bg-pink-200 from-pink-50 via-white to-pink-100 flex items-center justify-center px-4 py-24">
-
-      <div className="
-        w-full
-        max-w-md
-        bg-pink-100
-        rounded-3xl
-        shadow-xl
-        shadow-pink-50
-        border-none
-        p-6 sm:p-8
-      ">
-
+    <div className="min-h-screen bg-pink-200 flex items-center justify-center px-4 py-24">
+      <div
+        className="
+          w-full
+          max-w-md
+          bg-pink-100
+          rounded-3xl
+          shadow-xl
+          shadow-pink-50
+          p-6 sm:p-8
+        "
+      >
         {/* ================= LOGO ================= */}
         <div className="text-center mb-8">
-
-          <div className="
-            w-16 h-16
-            mx-auto
-            rounded-full
-            bg-pink-100
-            text-pink-500
-            flex
-            items-center
-            justify-center
-            text-2xl
-            mb-4
-          ">
+          <div
+            className="
+              w-16 h-16
+              mx-auto
+              rounded-full
+              bg-pink-100
+              text-pink-500
+              flex
+              items-center
+              justify-center
+              text-2xl
+              mb-4
+            "
+          >
             <FaHeart />
           </div>
 
-          <h1 className="
-            text-3xl
-            font-bold
-            text-gray-900
-          ">
+          <h1 className="text-3xl font-bold text-gray-900">
             Welcome Back
           </h1>
 
-          <p className="
-            text-gray-500
-            text-sm
-            mt-2
-          ">
+          <p className="text-gray-500 text-sm mt-2">
             Sign in to continue your skincare journey
           </p>
-
         </div>
 
-
         {/* ================= FORM ================= */}
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-5"
-        >
+        <form onSubmit={handleSubmit} className="space-y-5">
 
           {/* Email */}
           <div>
-
-            <label className="
-              block
-              text-sm
-              font-semibold
-              text-gray-700
-              mb-2
-            ">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               Email Address
             </label>
 
             <div className="relative">
-
-              <FaEnvelope className="
-                absolute
-                left-4
-                top-1/2
-                -translate-y-1/2
-                text-pink-400
-              " />
+              <FaEnvelope
+                className="
+                  absolute
+                  left-4
+                  top-1/2
+                  -translate-y-1/2
+                  text-pink-400
+                "
+              />
 
               <input
                 type="email"
@@ -143,41 +123,28 @@ function Login() {
                   transition
                 "
               />
-
             </div>
-
           </div>
-
 
           {/* Password */}
           <div>
-
-            <label className="
-              block
-              text-sm
-              font-semibold
-              text-gray-700
-              mb-2
-            ">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               Password
             </label>
 
             <div className="relative">
-
-              <FaLock className="
-                absolute
-                left-4
-                top-1/2
-                -translate-y-1/2
-                text-pink-400
-              " />
+              <FaLock
+                className="
+                  absolute
+                  left-4
+                  top-1/2
+                  -translate-y-1/2
+                  text-pink-400
+                "
+              />
 
               <input
-                type={
-                  showPassword
-                    ? "text"
-                    : "password"
-                }
+                type={showPassword ? "text" : "password"}
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
@@ -202,9 +169,7 @@ function Login() {
 
               <button
                 type="button"
-                onClick={() =>
-                  setShowPassword(!showPassword)
-                }
+                onClick={() => setShowPassword(!showPassword)}
                 className="
                   absolute
                   right-4
@@ -215,49 +180,24 @@ function Login() {
                   transition
                 "
               >
-                {showPassword ? (
-                  <FaEyeSlash />
-                ) : (
-                  <FaEye />
-                )}
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
-
             </div>
-
           </div>
 
-
           {/* Remember + Forgot */}
-          <div className="
-            flex
-            items-center
-            justify-between
-            text-sm
-          ">
-
-            <label className="
-              flex
-              items-center
-              gap-2
-              text-gray-500
-              cursor-pointer
-            ">
-
+          <div className="flex items-center justify-between text-sm">
+            <label className="flex items-center gap-2 text-gray-500 cursor-pointer">
               <input
                 type="checkbox"
                 name="remember"
                 checked={formData.remember}
                 onChange={handleChange}
-                className="
-                  w-4 h-4
-                  accent-pink-500
-                "
+                className="w-4 h-4 accent-pink-500"
               />
 
               Remember me
-
             </label>
-
 
             <button
               type="button"
@@ -272,9 +212,7 @@ function Login() {
             >
               Forgot Password?
             </button>
-
           </div>
-
 
           {/* Login Button */}
           <button
@@ -295,21 +233,19 @@ function Login() {
           >
             Login
           </button>
-
         </form>
 
-
         {/* ================= REGISTER ================= */}
-        <div className="
-          text-center
-          mt-7
-          pt-6
-          border-t
-          border-gray-100
-        ">
-
+        <div
+          className="
+            text-center
+            mt-7
+            pt-6
+            border-t
+            border-gray-100
+          "
+        >
           <p className="text-gray-500 text-sm">
-
             Don't have an account?{" "}
 
             <Link
@@ -322,31 +258,10 @@ function Login() {
             >
               Create Account
             </Link>
-
           </p>
-
-        </div>
-
-
-        {/* ================= BACK HOME ================= */}
-        <div className="text-center mt-5">
-
-          <Link
-            to="/"
-            className="
-              text-sm
-              text-gray-400
-              hover:text-pink-500
-              transition
-            "
-          >
-            ← Back to Home
-          </Link>
-
         </div>
 
       </div>
-
     </div>
   );
 }

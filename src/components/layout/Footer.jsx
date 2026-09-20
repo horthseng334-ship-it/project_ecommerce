@@ -24,7 +24,7 @@ function Footer() {
             </h2>
 
             <p className="mt-3 leading-6 max-w-md">
-              Your beauty, our care. Discover quality skincare products
+            Your beauty, our care. Discover quality skincare products
               for healthy and beautiful skin.
             </p>
 
@@ -108,7 +108,7 @@ function Footer() {
 
             <div className="flex items-start gap-3">
 
-              <FaMapMarkerAlt className="text-white text-xl mt-1 flex-shrink-0" />
+              <FaMapMarkerAlt className="text-white text-xl mt-1 ,flex-shrink-0" />
 
               <div>
                 <p className="font-medium">
