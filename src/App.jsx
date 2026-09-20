@@ -5,7 +5,7 @@ import MainLayout from "./components/layout/MainLayout";
 import Homepage from "./components/pages/Homepage";
 import ShopPage from "./components/pages/ShopPage";
 import ProductDetail from "./components/product/ProductDetail";
-import AboutPage from "./components/pages/AboutPage";
+import AboutPage from "./components/pages/Aboutpage";
 import Contact from "./components/pages/Contact";
 import Login from "./components/pages/Login";
 import CartPage from "./components/pages/CartPage";
